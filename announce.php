@@ -365,7 +365,8 @@ else
 	$sockres = @pfsockopen($ip, $port, $errno, $errstr, 5);
 	if (!$sockres)
 	{
-		$connectable = "no";
+		$connectable = "yes";
+		@fclose($sockres);
 	}
 	else
 	{
