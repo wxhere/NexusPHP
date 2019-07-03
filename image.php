@@ -25,6 +25,7 @@ if($action == "regimage")
 	
 		$randimg = rand(1, 5);
 		$im = imagecreatefrompng("pic/regimages/reg".$randimg.".png");
+		$textcolor = imagecolorallocate($im, 0, 0, 0);
 	
 		$imgheight = 40;
 		$imgwidth = 150;
@@ -37,7 +38,6 @@ if($action == "regimage")
 				imagesetpixel($im, rand(0, $imgwidth), rand(0, $imgheight), $textcolor);
 			}
 		
-		$textcolor = imagecolorallocate($im, 0, 0, 0);
 		imagestring($im, 5, $textposh, $textposv, $imagestring, $textcolor);
 	
 		// output the image

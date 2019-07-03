@@ -4323,7 +4323,7 @@ function return_category_image($categoryid, $link="")
 	return $catimg;
 }
 ?>
-<?
+<?php
 /*
 $location = array($lang_functions['text_unknown'],"");
 替换为
